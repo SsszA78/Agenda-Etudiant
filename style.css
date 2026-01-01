@@ -378,3 +378,53 @@ li {
 
 /* Autre (Gris) */
 .cours-autre { background-color: #95a5a6; }
+
+/* --- VERSION MOBILE (Responsive) --- */
+@media screen and (max-width: 768px) {
+
+    /* 1. Le Calendrier : On le laisse scroller horizontalement */
+    .calendrier-container {
+        overflow-x: auto; /* Active le défilement gauche-droite */
+        -webkit-overflow-scrolling: touch; /* Défilement fluide sur iPhone */
+        margin: 10px; /* Un peu de marge */
+        padding: 0; /* On enlève le gros padding */
+    }
+
+    .planning-grid {
+        /* On force la grille à garder sa taille large.
+           L'utilisateur devra glisser le doigt pour voir le Jeudi/Vendredi */
+        min-width: 700px;
+    }
+
+    /* 2. Le Menu "Mes Tâches" : Il doit prendre tout l'écran */
+    #menu-taches {
+        width: 90%; /* Prend 90% de la largeur du téléphone */
+        right: 5%; /* Centré (5% à gauche + 5% à droite + 90% = 100%) */
+        left: 5%;
+        top: 60px;
+        box-sizing: border-box;
+    }
+
+    /* 3. Ajustements divers pour que ce soit lisible */
+    h1 {
+        font-size: 1rem; /* Titre plus petit */
+    }
+
+    .btn-nav {
+        padding: 5px 8px; /* Boutons plus petits */
+    }
+
+    /* On empile les éléments du menu d'ajout pour qu'ils rentrent */
+    .input-group {
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    }
+
+    #nouvelle-tache {
+        width: 100%; /* Le champ texte prend toute la largeur */
+        margin-bottom: 5px;
+    }
+
+    .select-matiere {
+        flex-grow: 1; /* Le menu matière grossit */
+    }
+}
