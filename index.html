@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Planning BUT Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="titre-container">
+        <button class="btn-nav" onclick="changerSemaine(-1)">&#10094;</button>
+        <h1 id="titre-semaine">Chargement...</h1>
+        <button class="btn-nav" onclick="changerSemaine(1)">&#10095;</button>
+    </div>
+
+    <div class="menu-container">
+        <button id="btn-taches">Mes Tâches ▼</button>
+
+        <div id="menu-taches">
+            <div class="input-group">
+                <select id="choix-matiere" class="select-matiere">
+                    <option value="autre">Autre</option>
+                    <option value="webjava">Web / HTML / Java</option>
+                    <option value="python">Python</option>
+                    <option value="linux">Linux</option>
+                    <option value="maths">Maths</option>
+                    <option value="bd">Bases de Données</option>
+                    <option value="sae">SAE</option>
+                    <option value="eco">Économie</option>
+                    <option value="com">Communication</option>
+                    <option value="anglais">Anglais</option>
+                </select>
+
+                <input type="text" id="nouvelle-tache" placeholder="Tâche...">
+
+                <input type="date" id="date-tache">
+                <input type="time" id="heure-tache" step="1800"> <button class="btn-add" onclick="ajouterTache()">OK</button>
+            </div>
+
+            <div id="container-progression">
+                <div id="barre-remplissage"></div>
+            </div>
+            <p id="texte-progression">0% effectué</p>
+
+            <ul id="liste-taches">
+            </ul>
+
+            <p class="info-text">
+                Ces tâches sont enregistrées pour la semaine affichée.
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="calendrier-container">
+    <h2>Emploi du temps : <span id="sous-titre-date">Chargement...</span></h2>
+
+    <div class="planning-grid">
+        <div class="header-vide"></div>
+        <div class="header-jour">Lundi</div>
+        <div class="header-jour">Mardi</div>
+        <div class="header-jour">Mercredi</div>
+        <div class="header-jour">Jeudi</div>
+        <div class="header-jour">Vendredi</div>
+        <div class="header-jour">Samedi</div>
+        <div class="header-jour">Dimanche</div>
+
+        <div class="heure">08h</div>
+        <div class="heure">09h</div>
+        <div class="heure">10h</div>
+        <div class="heure">11h</div>
+        <div class="heure">12h</div>
+        <div class="heure">13h</div>
+        <div class="heure">14h</div>
+        <div class="heure">15h</div>
+        <div class="heure">16h</div>
+        <div class="heure">17h</div>
+        <div class="heure">18h</div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
