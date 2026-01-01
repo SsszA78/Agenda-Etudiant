@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mon Planning BUT Info</title>
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Etudiant</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -19,6 +19,7 @@
         <button id="btn-taches">Mes Tâches ▼</button>
 
         <div id="menu-taches">
+
             <div class="input-group">
                 <select id="choix-matiere" class="select-matiere">
                     <option value="autre">Autre</option>
@@ -33,8 +34,7 @@
                     <option value="anglais">Anglais</option>
                 </select>
 
-                <input type="text" id="nouvelle-tache" placeholder="Tâche...">
-
+                <input type="text" id="nouvelle-tache" placeholder="Nom de la tâche...">
                 <input type="date" id="date-tache">
                 <input type="time" id="heure-tache" step="1800"> <button class="btn-add" onclick="ajouterTache()">OK</button>
             </div>
